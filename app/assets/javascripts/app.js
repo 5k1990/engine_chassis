@@ -377,8 +377,8 @@ $("#send-mail").click(function () {
 
 function initializeMap() {
 
-    var lat = '44.8164056'; //Set your latitude.
-    var lon = '20.46090424'; //Set your longitude.
+    var lat = '20.587222'; //Set your latitude.
+    var lon = '72.935667'; //Set your longitude.
 
     var centerLon = lon - 0.0105;
 
@@ -398,7 +398,9 @@ function initializeMap() {
         position: new google.maps.LatLng(lat, lon),
     });
 
-    var infowindow = new google.maps.InfoWindow();
+    var infowindow = new google.maps.InfoWindow({
+        content: '<b>Jatin Motors</b><br>jatinemotors@yahoo.com<br>+91-263-222-6996'
+    });
 
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.open(map, marker);
