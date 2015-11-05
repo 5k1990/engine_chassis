@@ -24,48 +24,26 @@
         <!-- Start home section -->
         <div id="home">
             <!-- Start cSlider -->
-            <div id="da-slider" class="da-slider">
-                <div class="triangle"></div>
-                <!-- mask elemet use for masking background image -->
-                <div class="mask"></div>
-                <!-- All slides centred in container element -->
-                <div class="container">
-                    <!-- Start first slide -->
-                    <div class="da-slide">
-                        <div class="da-img">
-                        	<img src="/assets/Slider01.png" alt="image01" width="320">
-                        </div>
-                    </div>
-                    <!-- End first slide -->
-                    <!-- Start second slide -->
-                    <div class="da-slide">
-                        <div class="da-img">
-                            <img src="/assets/Slider02.png" width="320" alt="image02">
-                        </div>
-                    </div>
-                    <!-- End second slide -->
-                    <!-- Start third slide -->
-                    <div class="da-slide">
-                        <div class="da-img">
-                            <img src="/assets/Slider03.png" width="320" alt="image03">
-                        </div>
-                    </div>
-                    <!-- Start third slide -->
-                    <!-- Start fourth slide -->
-                    <div class="da-slide">
-                        <div class="da-img">
-                            <img src="/assets/Slider03.png" width="320" alt="image03">
-                        </div>
-                    </div>
-                    <!-- Start fourth slide -->
-
-                    <!-- Start cSlide navigation arrows -->
-                    <div class="da-arrows">
-                        <span class="da-arrows-prev"></span>
-                        <span class="da-arrows-next"></span>
-                    </div>
-                    <!-- End cSlide navigation arrows -->
-                </div>
+            <div class="container color-bg">
+           <div class="flexslider">
+              <ul class="slides">
+                <li>
+                    <img src="/assets/Slider01.jpg" />
+                    </li>
+                    <li>
+                    <img src="/assets/Slider02.jpg" />
+                    </li>
+                    <li>
+                    <img src="/assets/Slider03.jpg" />
+                    </li>
+                    <li>
+                    <img src="/assets/Slider04.jpg" />
+                    </li>
+                    <li>
+                    <img src="/assets/Slider05.jpg" />
+                    </li>
+              </ul>
+            </div>
             </div>
         </div>
         <!-- End home section -->
@@ -133,41 +111,7 @@
                 </div>
                 <div class="map-wrapper">
                     <div class="map-canvas" id="map-canvas">Loading map...</div>
-                    <div class="container">
-                        <div class="row-fluid">
-                            <div class="span5 contact-form centered">
-                                <h3>Say Hello</h3>
-                                <div id="successSend" class="alert alert-success invisible">
-                                    <strong>Well done!</strong>Your message has been sent.</div>
-                                <div id="errorSend" class="alert alert-error invisible">There was an error.</div>
-                                <form id="contact-form" action="php/mail.php">
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="text" id="name" name="name" placeholder="* Your name..." />
-                                            <div class="error left-align" id="err-name">Please enter name.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="email" name="email" id="email" placeholder="* Your email..." />
-                                            <div class="error left-align" id="err-email">Please enter valid email adress.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <textarea class="span12" name="comment" id="comment" placeholder="* Comments..."></textarea>
-                                            <div class="error left-align" id="err-comment">Please enter your comment.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <button id="send-mail" class="message-btn">Send message</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="container">
                     <div class="span9 center contact-info">
@@ -229,10 +173,9 @@
         <script type="text/javascript" src="/assets/jquery.mixitup.js"></script>
         <script type="text/javascript" src="/assets/bootstrap.js"></script>
         <script type="text/javascript" src="/assets/modernizr.custom.js"></script>
-        <script type="text/javascript" src="/assets/jquery.bxslider.js"></script>
-        <script type="text/javascript" src="/assets/jquery.cslider.js"></script>
         <script type="text/javascript" src="/assets/jquery.placeholder.js"></script>
         <script type="text/javascript" src="/assets/jquery.inview.js"></script>
+        <script defer src="/assets/jquery.flexslider.js"></script>
         <!-- Load google maps api and call initializeMap function defined in app.js -->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
         <!-- css3-mediaqueries.js for IE8 or older -->
@@ -243,5 +186,21 @@
         <script>
             $(document).ready(function(){
                 initializeMap();
+                
+                    $('.flexslider').flexslider({
+        animation: "slide",
+        itemWidth: 580,
+        itemMargin: 15,
+        minItems: 2,
+        maxItems: 2,
+        move: 1,
+         directionNav: false,
+        before: function (){
+            $('.flexslider .slides').removeClass('end');
+        },
+        end: function () {
+            $('.flexslider .slides').addClass('end');
+        }
+    });
             })
         </script>

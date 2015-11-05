@@ -41,7 +41,7 @@
 
 
     //Initialize header slider.
-    $('#da-slider').cslider();
+    // $('#da-slider').cslider();
 
     //Initial mixitup, used for animated filtering portgolio.
     $('#portfolio-grid').mixitup({
@@ -51,18 +51,18 @@
     });
 
     //Initial Out clients slider in client section
-    $('#clint-slider').bxSlider({
-        pager: false,
-        minSlides: 1,
-        maxSlides: 5,
-        moveSlides: 2,
-        slideWidth: 210,
-        slideMargin: 25,
-        prevSelector: $('#client-prev'),
-        nextSelector: $('#client-next'),
-        prevText: '<i class="icon-left-open"></i>',
-        nextText: '<i class="icon-right-open"></i>'
-    });
+    // $('#clint-slider').bxSlider({
+    //     pager: false,
+    //     minSlides: 1,
+    //     maxSlides: 5,
+    //     moveSlides: 2,
+    //     slideWidth: 210,
+    //     slideMargin: 25,
+    //     prevSelector: $('#client-prev'),
+    //     nextSelector: $('#client-next'),
+    //     prevText: '<i class="icon-left-open"></i>',
+    //     nextText: '<i class="icon-right-open"></i>'
+    // });
 
 
     $('input, textarea').placeholder();

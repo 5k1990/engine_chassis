@@ -29,7 +29,7 @@
 **********************************************************************/
  body {
     font-family:'Roboto', sans-serif;
-    color: #FFF;
+    color: #f88322;
     line-height:1.2em;
     font-size:17px;
     line-height:20px;
@@ -893,4 +893,9 @@ p {
     .price-column, .testimonial {
         margin-top:30px;
     }
+}
+
+
+#home {
+    background-color: #f88322;
 }
