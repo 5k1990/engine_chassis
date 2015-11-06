@@ -399,7 +399,7 @@ function initializeMap() {
     });
 
     var infowindow = new google.maps.InfoWindow({
-        content: '<b>Jatin Motors</b><br>jatinemotors@yahoo.com<br>+91-263-222-6996'
+        content: '<b>Jatin Motors</b><br>jatinmotors@yahoo.com<br>+91-263-222-6996'
     });
 
     google.maps.event.addListener(marker, 'click', function () {
